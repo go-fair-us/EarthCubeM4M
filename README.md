@@ -1,2 +1,2 @@
 # EarthCubeM4M
-This is the repositoryt for the EarthCube M4M Workshop.
+This is the repository for the EarthCube M4M Workshop.

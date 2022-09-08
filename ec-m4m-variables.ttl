@@ -22,100 +22,105 @@
 <https://purl.org/ecm4m/vocs> a skos:ConceptScheme;
   dct:created "2022-06-01T00:00:00+00:00"^^xsd:datetime;
   dct:creator <https://orcid.org/0000-0001-6875-5360>;
-  dct:description "Collection of some EarthCube M4M vocabularies."@en;
+  dct:description "Collection of some EarthCube M4M vocabularies.";
   dct:hasVersion "0.1.0";
-  dct:modified "2022-09-07T21:04:49-07:00"^^xsd:datetime;
+  dct:modified "2022-09-07T21:32:11-07:00"^^xsd:datetime;
   dct:rights <https://spdx.org/licenses/CC0-1.0>;
-  dct:title "Example containing some M4M vocabularies"@en;
+  dct:title "Example containing some M4M vocabularies";
   skos:hasTopConcept ecm4m-voc:Non-PolishedSectionContainerType, ecm4m-voc:Non-PolishedSectionSampleType,
     ecm4m-voc:PolishedSectionContainerType, ecm4m-voc:PolishedSectionSampleType;
-  skos:prefLabel "Example containing some M4M vocabularies"@en;
+  skos:prefLabel "Example containing some M4M vocabularies";
   foaf:homepage <https://github.com/go-fair-us/EarthCubeM4M> .
 
 ecm4m-voc:Non-PolishedSectionSampleType a skos:Concept;
   skos:definition "Set of terms describing the sample types for non-polished sections"@en;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:narrower ecm4m-voc:aggregate, ecm4m-voc:atomprobetip, ecm4m-voc:chip, ecm4m-voc:fibsection,
+    ecm4m-voc:liquid, ecm4m-voc:microtomeslices, ecm4m-voc:particle, ecm4m-voc:powder,
+    ecm4m-voc:residue;
   skos:prefLabel "Non-Polished Section Sample Type"@en;
   skos:topConceptOf <https://purl.org/ecm4m/vocs> .
 
 ecm4m-voc:powder a skos:Concept;
-  skos:broader "ecm-voc:Non-PolishedSectionSampleType"@en;
+  skos:broader ecm4m-voc:Non-PolishedSectionSampleType;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
   skos:prefLabel "powder"@en .
 
 ecm4m-voc:aggregate a skos:Concept;
-  skos:broader "ecm-voc:Non-PolishedSectionSampleType"@en;
+  skos:broader ecm4m-voc:Non-PolishedSectionSampleType;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
   skos:prefLabel "aggregate"@en .
 
 ecm4m-voc:chip a skos:Concept;
-  skos:broader "ecm-voc:Non-PolishedSectionSampleType"@en;
+  skos:broader ecm4m-voc:Non-PolishedSectionSampleType;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
   skos:prefLabel "chip"@en .
 
 ecm4m-voc:particle a skos:Concept;
-  skos:broader "ecm-voc:Non-PolishedSectionSampleType"@en;
+  skos:broader ecm4m-voc:Non-PolishedSectionSampleType;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
   skos:prefLabel "particle"@en .
 
 ecm4m-voc:liquid a skos:Concept;
-  skos:broader "ecm-voc:Non-PolishedSectionSampleType"@en;
+  skos:broader ecm4m-voc:Non-PolishedSectionSampleType;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
   skos:prefLabel "liquid"@en .
 
 ecm4m-voc:fibsection a skos:Concept;
-  skos:broader "ecm-voc:Non-PolishedSectionSampleType"@en;
+  skos:broader ecm4m-voc:Non-PolishedSectionSampleType;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
   skos:prefLabel "fibsection"@en .
 
 ecm4m-voc:atomprobetip a skos:Concept;
-  skos:broader "ecm-voc:Non-PolishedSectionSampleType"@en;
+  skos:broader ecm4m-voc:Non-PolishedSectionSampleType;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
   skos:prefLabel "atomprobetip"@en .
 
 ecm4m-voc:microtomeslices a skos:Concept;
-  skos:broader "ecm-voc:Non-PolishedSectionSampleType"@en;
+  skos:broader ecm4m-voc:Non-PolishedSectionSampleType;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
   skos:prefLabel "microtomeslices"@en .
 
 ecm4m-voc:residue a skos:Concept;
-  skos:broader "ecm-voc:Non-PolishedSectionSampleType"@en;
+  skos:broader ecm4m-voc:Non-PolishedSectionSampleType;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
   skos:prefLabel "residue"@en .
 
 ecm4m-voc:Non-PolishedSectionContainerType a skos:Concept;
   skos:definition "Set of words describing the sample types for non-polished sections"@en;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:narrower ecm4m-voc:aluminumcontainer, ecm4m-voc:aluminumwrapping, ecm4m-voc:customcontainer,
+    ecm4m-voc:glassvial, ecm4m-voc:polycarbonatecontainer, ecm4m-voc:teflonbag;
   skos:prefLabel "Non-Polished Section Container Type"@en;
   skos:topConceptOf <https://purl.org/ecm4m/vocs> .
 
 ecm4m-voc:aluminumcontainer a skos:Concept;
-  skos:broader "ecm-voc:Non-PolishedSectionContainerType"@en;
+  skos:broader ecm4m-voc:Non-PolishedSectionContainerType;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
   skos:prefLabel "aluminumcontainer"@en .
 
 ecm4m-voc:glassvial a skos:Concept;
-  skos:broader "ecm-voc:Non-PolishedSectionContainerType"@en;
+  skos:broader ecm4m-voc:Non-PolishedSectionContainerType;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
   skos:prefLabel "glassvial"@en .
 
 ecm4m-voc:teflonbag a skos:Concept;
-  skos:broader "ecm-voc:Non-PolishedSectionContainerType"@en;
+  skos:broader ecm4m-voc:Non-PolishedSectionContainerType;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
   skos:prefLabel "teflonbag"@en .
 
 ecm4m-voc:polycarbonatecontainer a skos:Concept;
-  skos:broader "ecm-voc:Non-PolishedSectionContainerType"@en;
+  skos:broader ecm4m-voc:Non-PolishedSectionContainerType;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
   skos:prefLabel "polycarbonatecontainer"@en .
 
 ecm4m-voc:aluminumwrapping a skos:Concept;
-  skos:broader "ecm-voc:Non-PolishedSectionContainerType"@en;
+  skos:broader ecm4m-voc:Non-PolishedSectionContainerType;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
   skos:prefLabel "aluminumwrapping"@en .
 
 ecm4m-voc:customcontainer a skos:Concept;
-  skos:broader "ecm-voc:Non-PolishedSectionContainerType"@en;
+  skos:broader ecm4m-voc:Non-PolishedSectionContainerType;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
   skos:prefLabel "customcontainer"@en .
 
@@ -126,62 +131,67 @@ ecm4m-voc:PolishedSectionSampleType a skos:Concept;
   skos:topConceptOf <https://purl.org/ecm4m/vocs> .
 
 ecm4m-voc:thinSection a skos:Concept;
-  skos:broader "ecm-voc:PolishedSectionsampletype"@en;
+  skos:broader ecm4m-voc:PolishedSectionsampletype;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
   skos:prefLabel "thinSection"@en .
 
 ecm4m-voc:thickSection a skos:Concept;
-  skos:broader "ecm-voc:PolishedSectionsampletype"@en;
+  skos:broader ecm4m-voc:PolishedSectionsampletype;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
   skos:prefLabel "thickSection"@en .
 
 ecm4m-voc:pottedButt a skos:Concept;
-  skos:broader "ecm-voc:PolishedSectionsampletype"@en;
+  skos:broader ecm4m-voc:PolishedSectionsampletype;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
   skos:prefLabel "pottedButt"@en .
 
 ecm4m-voc:pressedGrainsEpoxy a skos:Concept;
-  skos:broader "ecm-voc:PolishedSectionsampletype"@en;
+  skos:broader ecm4m-voc:PolishedSectionsampletype;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
   skos:prefLabel "pressedGrainsEpoxy"@en .
 
 ecm4m-voc:pressedGrainsMetal a skos:Concept;
-  skos:broader "ecm-voc:PolishedSectionsampletype"@en;
+  skos:broader ecm4m-voc:PolishedSectionsampletype;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
   skos:prefLabel "pressedGrainsMetal"@en .
 
 ecm4m-voc:PolishedSectionContainerType a skos:Concept;
   skos:definition "Set of words describing the sample types for polished sections"@en;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:narrower ecm4m-voc:ps_aluminumcontainer, ecm4m-voc:ps_aluminumwrapping, ecm4m-voc:ps_customcontainer,
+    ecm4m-voc:ps_glassvial, ecm4m-voc:ps_polycarbonatecontainer, ecm4m-voc:ps_teflonbag;
   skos:prefLabel "Polished Section Container Type"@en;
   skos:topConceptOf <https://purl.org/ecm4m/vocs> .
 
 ecm4m-voc:ps_aluminumcontainer a skos:Concept;
-  skos:broader "ecm-voc:PolishedSectionContainerType"@en;
+  skos:broader ecm4m-voc:PolishedSectionContainerType;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
   skos:prefLabel "aluminumcontainer"@en .
 
 ecm4m-voc:ps_glassvial a skos:Concept;
-  skos:broader "ecm-voc:PolishedSectionContainerType"@en;
+  skos:broader ecm4m-voc:PolishedSectionContainerType;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
   skos:prefLabel "glassvial"@en .
 
 ecm4m-voc:ps_teflonbag a skos:Concept;
-  skos:broader "ecm-voc:PolishedSectionContainerType"@en;
+  skos:broader ecm4m-voc:PolishedSectionContainerType;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
   skos:prefLabel "teflonbag"@en .
 
 ecm4m-voc:ps_polycarbonatecontainer a skos:Concept;
-  skos:broader "ecm-voc:PolishedSectionContainerType"@en;
+  skos:broader ecm4m-voc:PolishedSectionContainerType;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
   skos:prefLabel "polycarbonatecontainer"@en .
 
 ecm4m-voc:ps_aluminumwrapping a skos:Concept;
-  skos:broader "ecm-voc:PolishedSectionContainerType"@en;
+  skos:broader ecm4m-voc:PolishedSectionContainerType;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
   skos:prefLabel "aluminumwrapping"@en .
 
 ecm4m-voc:ps_customcontainer a skos:Concept;
-  skos:broader "ecm-voc:PolishedSectionContainerType"@en;
+  skos:broader ecm4m-voc:PolishedSectionContainerType;
   skos:inScheme <https://purl.org/ecm4m/vocs>;
   skos:prefLabel "customcontainer"@en .
+
+ecm4m-voc:PolishedSectionsampletype skos:narrower ecm4m-voc:pottedButt, ecm4m-voc:pressedGrainsEpoxy,
+    ecm4m-voc:pressedGrainsMetal, ecm4m-voc:thickSection, ecm4m-voc:thinSection .

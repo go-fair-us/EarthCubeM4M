@@ -1,0 +1,587 @@
+
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix antech: <https://purl.org/ecm4m/vocs/analyticaltechnique/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ecm4m-voc: <https://purl.org/ecm4m/vocs/> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://purl.org/ecm4m/vocs> a skos:ConceptScheme;
+  dct:created "2022-06-01T00:00:00+00:00"^^xsd:datetime, "44812"^^xsd:datetime;
+  dct:creator "Steve, Pierre, Carina"@en, <https://orcid.org/0000-0001-6875-5360>;
+  dct:description "Collection of some EarthCube M4M vocabularies."@en;
+  dct:hasVersion "0.1.0";
+  dct:modified "2022-09-08T11:06:25-07:00"^^xsd:datetime, "44812"^^xsd:datetime;
+  dct:rights <https://spdx.org/licenses/CC0-1.0>;
+  dct:title "Example containing some M4M vocabularies"@en, "OSIRIS-REx Sample Analytical Techniques"@en;
+  skos:hasTopConcept ecm4m-voc:Non-PolishedSectionContainerType, ecm4m-voc:Non-PolishedSectionSampleType,
+    ecm4m-voc:PolishedSectionContainerType, ecm4m-voc:PolishedSectionSampleType, antech:40ArDiv39Argeochronologyandthermochronology,
+    antech:AngleofReposeMeasurement, antech:Atomprobetomography, antech:CapacitanceDilatometry,
+    antech:Compressiontest, antech:DifferentialScanningCalorimetry, antech:DirectShearStrengthMeasurement,
+    antech:Electronmicroprobeanalysis, <https://purl.org/ecm4m/vocs/analyticaltechnique/Focusedionbeam–scanningelectronmicroscopy>,
+    antech:GammaCounting, <https://purl.org/ecm4m/vocs/analyticaltechnique/GasChromatography–Combustion–IsotopicRatioMassSpectrometry>,
+    antech:Gaspycnometry, antech:Inductivelycoupledplasma-opticalemissionspectrometry,
+    antech:LaserAssistedFluorinationforBulkOxygenIsotopeRatioMeasurements, antech:Massspectrometry,
+    antech:MiniCryogen-FreeMeasurementSystemforThermalConductivity, antech:NanoindentationandMicroindentation,
+    antech:NuclearMagneticResonanceSpectroscopy, antech:ParticlecohesiondeterminationwithAFM,
+    antech:QuantitativeReflectanceImaging, antech:Ramanvibrationalspectroscopy, antech:ScanningThermalMicroscopywithAFM,
+    antech:Scanningelectronmicroscopy, antech:SeismicVelocitiesandRockUltrasonicElasticConstants,
+    antech:SensitiveHighMassResolutionIonMicroprobe, antech:SphericalCellBulkThermalConductivityAnalysis,
+    antech:SteppedHeatingCarbonandNitrogenIsotopicCompositions, antech:StructuredLightScanning,
+    antech:TransmissionElectronMicroscopy, antech:Visible-near-infrared-andmid-infraredimaging,
+    antech:VisibleLightMicroscopy, antech:X-rayFluorescencespectroscopy, antech:X-rayabsorptionnearedgestructure-XANESspectroscopy,
+    antech:X-raycomputedtomography, antech:X-raydiffraction, antech:X-rayphotoelectronspectroscopy;
+  skos:prefLabel "Example containing some M4M vocabularies"@en, "O-REx sample analytical techniques"@en;
+  foaf:homepage <https://github.com/go-fair-us/EarthCubeM4M> .
+
+ecm4m-voc:Non-PolishedSectionSampleType a skos:Concept;
+  skos:definition "Set of terms describing the sample types for non-polished sections"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:narrower ecm4m-voc:aggregate, ecm4m-voc:atomprobetip, ecm4m-voc:chip, ecm4m-voc:fibsection,
+    ecm4m-voc:liquid, ecm4m-voc:microtomeslices, ecm4m-voc:particle, ecm4m-voc:powder,
+    ecm4m-voc:residue;
+  skos:prefLabel "Non-Polished Section Sample Type"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+ecm4m-voc:powder a skos:Concept;
+  skos:broader ecm4m-voc:Non-PolishedSectionSampleType;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:prefLabel "powder"@en .
+
+ecm4m-voc:aggregate a skos:Concept;
+  skos:broader ecm4m-voc:Non-PolishedSectionSampleType;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:prefLabel "aggregate"@en .
+
+ecm4m-voc:chip a skos:Concept;
+  skos:broader ecm4m-voc:Non-PolishedSectionSampleType;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:prefLabel "chip"@en .
+
+ecm4m-voc:particle a skos:Concept;
+  skos:broader ecm4m-voc:Non-PolishedSectionSampleType;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:prefLabel "particle"@en .
+
+ecm4m-voc:liquid a skos:Concept;
+  skos:broader ecm4m-voc:Non-PolishedSectionSampleType;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:prefLabel "liquid"@en .
+
+ecm4m-voc:fibsection a skos:Concept;
+  skos:broader ecm4m-voc:Non-PolishedSectionSampleType;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:prefLabel "fibsection"@en .
+
+ecm4m-voc:atomprobetip a skos:Concept;
+  skos:broader ecm4m-voc:Non-PolishedSectionSampleType;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:prefLabel "atomprobetip"@en .
+
+ecm4m-voc:microtomeslices a skos:Concept;
+  skos:broader ecm4m-voc:Non-PolishedSectionSampleType;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:prefLabel "microtomeslices"@en .
+
+ecm4m-voc:residue a skos:Concept;
+  skos:broader ecm4m-voc:Non-PolishedSectionSampleType;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:prefLabel "residue"@en .
+
+ecm4m-voc:Non-PolishedSectionContainerType a skos:Concept;
+  skos:definition "Set of words describing the sample types for non-polished sections"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:narrower ecm4m-voc:aluminumcontainer, ecm4m-voc:aluminumwrapping, ecm4m-voc:customcontainer,
+    ecm4m-voc:glassvial, ecm4m-voc:polycarbonatecontainer, ecm4m-voc:teflonbag;
+  skos:prefLabel "Non-Polished Section Container Type"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+ecm4m-voc:aluminumcontainer a skos:Concept;
+  skos:broader ecm4m-voc:Non-PolishedSectionContainerType;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:prefLabel "aluminumcontainer"@en .
+
+ecm4m-voc:glassvial a skos:Concept;
+  skos:broader ecm4m-voc:Non-PolishedSectionContainerType;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:prefLabel "glassvial"@en .
+
+ecm4m-voc:teflonbag a skos:Concept;
+  skos:broader ecm4m-voc:Non-PolishedSectionContainerType;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:prefLabel "teflonbag"@en .
+
+ecm4m-voc:polycarbonatecontainer a skos:Concept;
+  skos:broader ecm4m-voc:Non-PolishedSectionContainerType;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:prefLabel "polycarbonatecontainer"@en .
+
+ecm4m-voc:aluminumwrapping a skos:Concept;
+  skos:broader ecm4m-voc:Non-PolishedSectionContainerType;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:prefLabel "aluminumwrapping"@en .
+
+ecm4m-voc:customcontainer a skos:Concept;
+  skos:broader ecm4m-voc:Non-PolishedSectionContainerType;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:prefLabel "customcontainer"@en .
+
+ecm4m-voc:PolishedSectionSampleType a skos:Concept;
+  skos:definition "Set of words describing the sample types for polished sections"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:prefLabel "Polished Section Sample Type"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+ecm4m-voc:thinSection a skos:Concept;
+  skos:broader ecm4m-voc:PolishedSectionsampletype;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:prefLabel "thinSection"@en .
+
+ecm4m-voc:thickSection a skos:Concept;
+  skos:broader ecm4m-voc:PolishedSectionsampletype;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:prefLabel "thickSection"@en .
+
+ecm4m-voc:pottedButt a skos:Concept;
+  skos:broader ecm4m-voc:PolishedSectionsampletype;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:prefLabel "pottedButt"@en .
+
+ecm4m-voc:pressedGrainsEpoxy a skos:Concept;
+  skos:broader ecm4m-voc:PolishedSectionsampletype;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:prefLabel "pressedGrainsEpoxy"@en .
+
+ecm4m-voc:pressedGrainsMetal a skos:Concept;
+  skos:broader ecm4m-voc:PolishedSectionsampletype;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:prefLabel "pressedGrainsMetal"@en .
+
+ecm4m-voc:PolishedSectionContainerType a skos:Concept;
+  skos:definition "Set of words describing the sample types for polished sections"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:narrower ecm4m-voc:ps_aluminumcontainer, ecm4m-voc:ps_aluminumwrapping, ecm4m-voc:ps_customcontainer,
+    ecm4m-voc:ps_glassvial, ecm4m-voc:ps_polycarbonatecontainer, ecm4m-voc:ps_teflonbag;
+  skos:prefLabel "Polished Section Container Type"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+ecm4m-voc:ps_aluminumcontainer a skos:Concept;
+  skos:broader ecm4m-voc:PolishedSectionContainerType;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:prefLabel "aluminumcontainer"@en .
+
+ecm4m-voc:ps_glassvial a skos:Concept;
+  skos:broader ecm4m-voc:PolishedSectionContainerType;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:prefLabel "glassvial"@en .
+
+ecm4m-voc:ps_teflonbag a skos:Concept;
+  skos:broader ecm4m-voc:PolishedSectionContainerType;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:prefLabel "teflonbag"@en .
+
+ecm4m-voc:ps_polycarbonatecontainer a skos:Concept;
+  skos:broader ecm4m-voc:PolishedSectionContainerType;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:prefLabel "polycarbonatecontainer"@en .
+
+ecm4m-voc:ps_aluminumwrapping a skos:Concept;
+  skos:broader ecm4m-voc:PolishedSectionContainerType;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:prefLabel "aluminumwrapping"@en .
+
+ecm4m-voc:ps_customcontainer a skos:Concept;
+  skos:broader ecm4m-voc:PolishedSectionContainerType;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:prefLabel "customcontainer"@en .
+
+ecm4m-voc:PolishedSectionsampletype skos:narrower ecm4m-voc:pottedButt, ecm4m-voc:pressedGrainsEpoxy,
+    ecm4m-voc:pressedGrainsMetal, ecm4m-voc:thickSection, ecm4m-voc:thinSection .
+
+antech:VisibleLightMicroscopy a skos:Concept;
+  dct:source "MAPWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "VLM"@en;
+  skos:prefLabel "Visible Light Microscopy"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:Ramanvibrationalspectroscopy a skos:Concept;
+  dct:source "MAPWG"@en, "SOAWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "RAMAN"@en;
+  skos:prefLabel "Raman vibrational spectroscopy"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:Scanningelectronmicroscopy a skos:Concept;
+  dct:source "MAPWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "SEM"@en;
+  skos:prefLabel "Scanning electron microscopy"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:TransmissionElectronMicroscopy a skos:Concept;
+  dct:source "MAPWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "TEM"@en;
+  skos:prefLabel "Transmission Electron Microscopy"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+<https://purl.org/ecm4m/vocs/analyticaltechnique/Focusedionbeam–scanningelectronmicroscopy>
+  a skos:Concept;
+  dct:source "MAPWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "FIB-SEM"@en;
+  skos:prefLabel "Focused ion beam–scanning electron microscopy"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:Electronmicroprobeanalysis a skos:Concept;
+  dct:source "MAPWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "EMPA"@en;
+  skos:prefLabel "Electron microprobe analysis"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:X-rayabsorptionnearedgestructure-XANESspectroscopy a skos:Concept;
+  dct:source "MAPWG"@en, "SOAWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "XANES"@en;
+  skos:prefLabel "X-ray absorption near edge structure (XANES) spectroscopy"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:X-raycomputedtomography a skos:Concept;
+  dct:source "MAPWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "XCT"@en;
+  skos:prefLabel "X-ray computed tomography"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:X-raydiffraction a skos:Concept;
+  dct:source "MAPWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "XRD"@en;
+  skos:prefLabel "X-ray diffraction"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:X-rayphotoelectronspectroscopy a skos:Concept;
+  dct:source "MAPWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "XPS"@en;
+  skos:prefLabel "X-ray photoelectron spectroscopy"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:QuantitativeReflectanceImaging a skos:Concept;
+  dct:source "SSAWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "QRI"@en;
+  skos:prefLabel "Quantitative Reflectance Imaging"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:Visible-near-infrared-andmid-infraredimaging a skos:Concept;
+  dct:source "SSAWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "VNMIR"@en;
+  skos:prefLabel "Visible, near-infrared, and mid-infrared imaging"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:Secondaryionmassspectrometry a skos:Concept;
+  dct:source "SEIWG"@en;
+  skos:broader antech:Massspectrometry;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "SIMS"@en;
+  skos:prefLabel "Secondary ion mass spectrometry"@en .
+
+antech:Nanoscalesecondaryionmassspectrometry a skos:Concept;
+  dct:source "SEIWG"@en;
+  skos:broader antech:Massspectrometry;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "NANOSIMS"@en;
+  skos:prefLabel "Nanoscale secondary ion mass spectrometry"@en .
+
+antech:SensitiveHighMassResolutionIonMicroprobe a skos:Concept;
+  dct:source "SEIWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "SHRIMP"@en;
+  skos:prefLabel "Sensitive High Mass Resolution Ion Microprobe"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:Thermalionizationmassspectrometry a skos:Concept;
+  dct:source "SEIWG"@en;
+  skos:broader antech:Massspectrometry;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "TIMS"@en;
+  skos:prefLabel "Thermal ionization mass spectrometry"@en .
+
+antech:High-resolutioninductivelycoupledplasmamassspectrometry a skos:Concept;
+  dct:source "SEIWG"@en;
+  skos:broader antech:Massspectrometry;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "HR-ICPMS"@en;
+  skos:prefLabel "High-resolution inductively coupled plasma mass spectrometry"@en .
+
+antech:QuadrupoleInductivelyCoupledPlasmaMassSpectrometry a skos:Concept;
+  dct:source "SEIWG"@en;
+  skos:broader antech:Massspectrometry;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "ICPMS"@en;
+  skos:prefLabel "Quadrupole Inductively Coupled Plasma Mass Spectrometry"@en .
+
+antech:Multi-CollectorInductivelyCoupledPlasmaMassSpectrometry a skos:Concept;
+  dct:source "SEIWG"@en;
+  skos:broader antech:Massspectrometry;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "MC-ICPMS"@en;
+  skos:prefLabel "Multi-Collector Inductively Coupled Plasma Mass Spectrometry"@en .
+
+antech:LaserAblationInductivelycoupledplasmamassspectrometry a skos:Concept;
+  dct:source "SEIWG"@en;
+  skos:broader antech:Massspectrometry;
+  skos:definition "NOTE: Probably will be removed from SAP"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "LA-ICPMS"@en;
+  skos:prefLabel "Laser Ablation Inductively coupled plasma mass spectrometry"@en .
+
+antech:Inductivelycoupledplasma-opticalemissionspectrometry a skos:Concept;
+  dct:source "SEIWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "ICP-OES"@en;
+  skos:prefLabel "Inductively coupled plasma - optical emission spectrometry"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:X-rayFluorescencespectroscopy a skos:Concept;
+  dct:source "SEIWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "XRF"@en;
+  skos:prefLabel "X-ray Fluorescence spectroscopy"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:Elementalanalysis-isotoperatiomassspectrometry a skos:Concept;
+  dct:source "SEIWG"@en, "SOAWG"@en;
+  skos:broader antech:Massspectrometry;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "EA-IRMS"@en;
+  skos:prefLabel "Elemental analysis - isotope ratio mass spectrometry"@en .
+
+antech:NoblegasandNitrogenStaticMassSpectrometry a skos:Concept;
+  dct:source "SEIWG"@en;
+  skos:broader antech:Massspectrometry;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "NG-NS-MS"@en;
+  skos:prefLabel "Noble gas and Nitrogen Static Mass Spectrometry"@en .
+
+antech:Secondaryneutralmassspectrometry a skos:Concept;
+  dct:source "SEIWG"@en;
+  skos:broader antech:Massspectrometry;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "SNMS"@en;
+  skos:prefLabel "Secondary neutral mass spectrometry"@en .
+
+antech:LaserAssistedFluorinationforBulkOxygenIsotopeRatioMeasurements a skos:Concept;
+  dct:source "SEIWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "LAF"@en;
+  skos:prefLabel "Laser Assisted Fluorination for Bulk Oxygen Isotope Ratio Measurements"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:SteppedHeatingCarbonandNitrogenIsotopicCompositions a skos:Concept;
+  dct:source "SEIWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "FINESSE"@en;
+  skos:prefLabel "Stepped Heating Carbon and Nitrogen Isotopic Compositions"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:GammaCounting a skos:Concept;
+  dct:source "SEIWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "GC"@en;
+  skos:prefLabel "Gamma Counting"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:Atomprobetomography a skos:Concept;
+  dct:source "SEIWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "APT"@en;
+  skos:prefLabel "Atom probe tomography"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:Neutronirradiationnoblegasmassspectrometry a skos:Concept;
+  dct:source "SEIWG"@en;
+  skos:broader antech:Massspectrometry;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "NI-NGMS"@en;
+  skos:prefLabel "Neutron irradiation noble gas mass spectrometry"@en .
+
+antech:Resonanceionizationtimeofflightnoblegasmassspectrometry a skos:Concept;
+  dct:source "SEIWG"@en;
+  skos:broader antech:Massspectrometry;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "RI-TOF-NGMS"@en;
+  skos:prefLabel "Resonance ionization time of flight noble gas mass spectrometry"@en .
+
+antech:40ArDiv39Argeochronologyandthermochronology a skos:Concept;
+  dct:source "SEIWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "ARGT"@en;
+  skos:prefLabel "40Ar/39Ar geochronology and thermochronology"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:GasChromatography-MassSpectrometry a skos:Concept;
+  dct:source "SOAWG"@en;
+  skos:broader antech:Massspectrometry;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "GC-MS"@en;
+  skos:prefLabel "Gas Chromatography-Mass Spectrometry"@en .
+
+antech:LiquidChromatography-MassSpectrometry a skos:Concept;
+  dct:source "SOAWG"@en;
+  skos:broader antech:Massspectrometry;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "LC-MS"@en;
+  skos:prefLabel "Liquid Chromatography-Mass Spectrometry"@en .
+
+antech:FourierTransformIonCyclotronResonanceMassSpectrometry a skos:Concept;
+  dct:source "SOAWG"@en;
+  skos:broader antech:Massspectrometry;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "FTICR-MS"@en;
+  skos:prefLabel "Fourier Transform Ion Cyclotron Resonance Mass Spectrometry"@en .
+
+antech:MicroprobeTwo-StepLaserMassSpectrometry a skos:Concept;
+  dct:source "SOAWG"@en;
+  skos:broader antech:Massspectrometry;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "uL2MS"@en;
+  skos:prefLabel "Microprobe Two-Step Laser Mass Spectrometry"@en .
+
+antech:NuclearMagneticResonanceSpectroscopy a skos:Concept;
+  dct:source "SOAWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "NMR"@en;
+  skos:prefLabel "Nuclear Magnetic Resonance Spectroscopy"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+<https://purl.org/ecm4m/vocs/analyticaltechnique/GasChromatography–Combustion–IsotopicRatioMassSpectrometry>
+  a skos:Concept;
+  dct:source "SOAWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "GC-C-IRMS"@en;
+  skos:prefLabel "Gas Chromatography–Combustion–Isotopic Ratio Mass Spectrometry"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:Gaspycnometry a skos:Concept;
+  dct:source "SPTAWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "GPYC"@en;
+  skos:prefLabel "Gas pycnometry"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:StructuredLightScanning a skos:Concept;
+  dct:source "SPTAWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "SLS"@en;
+  skos:prefLabel "Structured Light Scanning"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:SphericalCellBulkThermalConductivityAnalysis a skos:Concept;
+  dct:source "SPTAWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "SCBTCA"@en;
+  skos:prefLabel "Spherical Cell Bulk Thermal Conductivity Analysis"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:DifferentialScanningCalorimetry a skos:Concept;
+  dct:source "SPTAWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "DSC"@en;
+  skos:prefLabel "Differential Scanning Calorimetry"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:ScanningThermalMicroscopywithAFM a skos:Concept;
+  dct:source "SPTAWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "STHM-AFM"@en;
+  skos:prefLabel "Scanning Thermal Microscopy with AFM"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:MiniCryogen-FreeMeasurementSystemforThermalConductivity a skos:Concept;
+  dct:source "SPTAWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "MCFMS"@en;
+  skos:prefLabel "Mini Cryogen-Free Measurement System for Thermal Conductivity"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:ParticlecohesiondeterminationwithAFM a skos:Concept;
+  dct:source "SPTAWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "PCD-AFM"@en;
+  skos:prefLabel "Particle cohesion determination with AFM"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:AngleofReposeMeasurement a skos:Concept;
+  dct:source "SPTAWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "ARM"@en;
+  skos:prefLabel "Angle of Repose Measurement"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:NanoindentationandMicroindentation a skos:Concept;
+  dct:source "SPTAWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "NI-MI"@en;
+  skos:prefLabel "Nanoindentation and Microindentation"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:Compressiontest a skos:Concept;
+  dct:source "SPTAWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "COMPT"@en;
+  skos:prefLabel "Compression test"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:SeismicVelocitiesandRockUltrasonicElasticConstants a skos:Concept;
+  dct:source "SPTAWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "SV-RUEC"@en;
+  skos:prefLabel "Seismic Velocities and Rock Ultrasonic Elastic Constants"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:CapacitanceDilatometry a skos:Concept;
+  dct:source "SPTAWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "CAPD"@en;
+  skos:prefLabel "Capacitance Dilatometry"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:DirectShearStrengthMeasurement a skos:Concept;
+  dct:source "SPTAWG"@en;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:notation "DSSM"@en;
+  skos:prefLabel "Direct Shear Strength Measurement"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
+
+antech:Massspectrometry a skos:Concept;
+  skos:inScheme <https://purl.org/ecm4m/vocs>;
+  skos:narrower antech:Elementalanalysis-isotoperatiomassspectrometry, antech:FourierTransformIonCyclotronResonanceMassSpectrometry,
+    antech:GasChromatography-MassSpectrometry, antech:High-resolutioninductivelycoupledplasmamassspectrometry,
+    antech:LaserAblationInductivelycoupledplasmamassspectrometry, antech:LiquidChromatography-MassSpectrometry,
+    antech:MicroprobeTwo-StepLaserMassSpectrometry, antech:Multi-CollectorInductivelyCoupledPlasmaMassSpectrometry,
+    antech:Nanoscalesecondaryionmassspectrometry, antech:Neutronirradiationnoblegasmassspectrometry,
+    antech:NoblegasandNitrogenStaticMassSpectrometry, antech:QuadrupoleInductivelyCoupledPlasmaMassSpectrometry,
+    antech:Resonanceionizationtimeofflightnoblegasmassspectrometry, antech:Secondaryionmassspectrometry,
+    antech:Secondaryneutralmassspectrometry, antech:Thermalionizationmassspectrometry;
+  skos:prefLabel "Mass spectrometry"@en;
+  skos:topConceptOf <https://purl.org/ecm4m/vocs> .
